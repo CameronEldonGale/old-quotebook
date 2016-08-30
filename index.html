@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <title>Quotes</title>
+  </head>
+  <body ng-controller="masterControl">
+    <!-- {{somethingBroke}} -->
+        <div class="quote-container first-quote">
+          <p>
+
+          "Quotes aren't fun"
+          <span class="author">No One Ever</span></p>
+            <span id="text-boxes">
+
+          <div>
+            Search: <input type="text" ng-model='filterText'/>
+          </div>
+
+
+
+              Quote :<input id="text-box"  ng-model="quote.text" />
+              Author :<input id="text-box"  ng-model="quote.author" />
+              </span>
+
+          <input class="button" type="image"  src="/img/addButton.png" alt="add" ng-click="addQuote(quote)"/>
+        </div>
+
+
+      <div class="quote-container" ng-repeat="quote in Quotes| filter: filterText">
+        <p>
+
+        "{{quote.text}}"
+        <span class="author">{{quote.author}}</span></p>
+        <br>
+       <input class="button" type="image" ng-click="removeQuote(quote.text)" src="/img/smaller close.png" alt="remove"/>
+      </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/masterControl.js"></script>
+    <script src="js/mainService.js">
+  </body>
+</html>

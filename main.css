@@ -1,0 +1,42 @@
+body {
+  background: #F6FFFB;
+  color: ##383838;
+  font-size: 200%;
+  border: 2px solid  #B3B3B3;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px  #B3B3B3;
+
+
+}
+
+.quote-container {
+  border-bottom: 1px solid #707070;
+
+  text-align: center;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px  #B3B3B3;
+}
+
+.author {
+  color: #707070;
+  /*font-size: 150%;*/
+}
+  .button {
+
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+}
+#text-boxes {
+  font-size: 50%;
+  margin-bottom: 10px;
+}
+/*#text-box {
+  position:relative;
+
+}*/
+
+.hide{
+  display: none;
+}
